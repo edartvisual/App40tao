@@ -1,0 +1,250 @@
+
+/* Estilo tirado do Html*/
+
+        /* Estilos gerais */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para o cabeçalho */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #555;
+        }
+
+        #escudo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #escudo-time {
+            max-width: 50px;
+            max-height: 50px;
+            vertical-align: middle;
+        }
+
+        #carregar-escudo-label {
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 0.9em;
+            color: #007bff;
+        }
+
+        /* Estilos para o formulário */
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="date"],
+        .form-container select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para opções de filtro e ordenação */
+        .filter-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .filter-options label {
+            font-weight: bold;
+        }
+
+        .filter-options select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Estilos para a tabela */
+        .table-container {
+            margin-top: 20px;
+        }
+
+        #movimentacoes {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        #movimentacoes th, #movimentacoes td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #movimentacoes th {
+            background-color: #f0f0f0;
+        }
+
+        .acoes-cell {
+            text-align: center;
+        }
+
+        .acoes-cell i {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .acoes-cell i.fa-edit {
+            color: #007bff;
+        }
+
+        .acoes-cell i.fa-trash-alt {
+            color: #dc3545;
+        }
+
+        /* Estilos para o saldo */
+        .saldo-container {
+            margin-top: 20px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .saldo-positivo {
+            color: green;
+        }
+
+        .saldo-negativo {
+            color: red;
+        }
+
+        /* Estilos para o botão de gerar relatório */
+        #gerarRelatorio {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+        #gerarRelatorio:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para o modal de resumo */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #resumo-content {
+            margin-bottom: 20px;
+        }
+
+        #resumoModal button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        #resumoModal button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            .form-container input[type="text"],
+            .form-container input[type="number"],
+            .form-container input[type="date"],
+            .form-container select,
+            .form-container button {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .filter-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            #movimentacoes th, #movimentacoes td {
+                font-size: 0.9em;
+                padding: 6px;
+            }
+        }
